@@ -3,15 +3,15 @@
  <br>
  Tak to beta portala 3
 </br>
-  <canvas id="c" width="4000" height="4000"></canvas>
+  <canvas id="c" width="400" height="400"></canvas>
   <script>
     context = c.getContext("2d");
     const bird = new Image();
     bird.src = "bird.png";
     birdX = birdDY = score = bestScore = 0;
     interval = birdSize = pipeWidth = topPipeBottomY = 24;
-    birdY = pipeGap = 500;
-    canvasSize = pipeX = 4000;
+    birdY = pipeGap = 200;
+    canvasSize = pipeX = 400;
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       context.fillStyle = "orange";

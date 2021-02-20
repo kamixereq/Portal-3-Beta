@@ -15,7 +15,7 @@
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       context.fillStyle = "orange";
-      context.fillRect(0,0,canvasSize,canvasSize); // Draw sky
+      context.fillRect(0,8,canvasSize,canvasSize); // Draw sky
       birdY -= birdDY -= 0.5; // Gravity
       context.drawImage(bird, birdX, birdY, birdSize * (524/374), birdSize); // Draw bird
       context.fillStyle = "SpringGreen";

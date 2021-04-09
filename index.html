@@ -3,7 +3,7 @@
 <source src="horse.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
- <p> Gra autorstwa Kamila (nazwisko usunięte) ,któremu nudziło się w weekend</p>
+ <p> Gra autorstwa Kamila pseudonim. Osioł w Garniturze ,któremu nudziło się w weekend</p>
  <br>
  Tak to beta portala 3
 </br>
@@ -21,22 +21,22 @@ Your browser does not support the audio element.
     c.onclick = () => (birdDY = 9) ;
     setInterval(() => {
       context.fillStyle = "orange";
-      context.fillRect(0,8,canvasSize,canvasSize); // Draw sky
-      birdY -= birdDY -= 0.5; // Gravity
-      context.drawImage(bird, birdX, birdY, birdSize * (724/574), birdSize); // Draw bird
+      context.fillRect(0,8,canvasSize,canvasSize); //
+      birdY -= birdDY -= 0.5; //
+      context.drawImage(bird, birdX, birdY, birdSize * (724/574), birdSize); /
       context.fillStyle = "SpringGreen";
-      pipeX -= 11; // Move pipe
-      pipeX < -pipeWidth && // Pipe off screen?
-        ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); // Reset pipe and randomize gap.
-      context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); // Draw top pipe
-      context.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasSize); // Draw bottom pipe
+      pipeX -= 11; /
+      pipeX < -pipeWidth && //
+        ((pipeX = canvasSize), (topPipeBottomY = pipeGap * Math.random())); /
+      context.fillRect(pipeX, 0, pipeWidth, topPipeBottomY); /
+      context.fillRect(pipeX, topPipeBottomY + pipeGap, pipeWidth, canvasSize); /
       context.fillStyle = "black";
-      context.fillText(score++, 9, 25); // Increase and draw score
-      bestScore = bestScore < score ? score : bestScore; // New best score?
-      context.fillText(`Best: ${bestScore}`, 9, 50); // Draw best score
-      (((birdY < topPipeBottomY || birdY > topPipeBottomY + pipeGap) && pipeX < birdSize * (524/374))// Bird hit pipe?
+      context.fillText(score++, 9, 25); //
+      bestScore = bestScore < score ? score : bestScore; /
+      context.fillText(`Best: ${bestScore}`, 9, 50); //
+      (((birdY < topPipeBottomY || birdY > topPipeBottomY + pipeGap) && pipeX < birdSize * (524/374))//
        || birdY > canvasSize) && // Bird falls off screen
-      ((birdDY = 0), (birdY = 20), (pipeX = canvasSize), (score = 0)); // Bird died
+      ((birdDY = 0), (birdY = 20), (pipeX = canvasSize), (score = 0)); 
     }, interval)
   </script>
 </body>
